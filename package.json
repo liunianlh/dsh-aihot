@@ -1,0 +1,62 @@
+{
+  "name": "dsh-aihot",
+  "version": "1.2.0",
+  "type": "module",
+  "description": "AI news panel for DeepSeek Harness: 24-hour picks, recent stories, trending topics, the daily digest and search from AIHOT, with category filters, date grouping and endless scroll.",
+  "license": "MIT",
+  "author": {
+    "name": "liunianlh",
+    "url": "https://github.com/liunianlh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liunianlh/dsh-aihot.git"
+  },
+  "homepage": "https://github.com/liunianlh/dsh-aihot#readme",
+  "bugs": {
+    "url": "https://github.com/liunianlh/dsh-aihot/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "ai-news",
+    "news",
+    "aihot",
+    "panel"
+  ],
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "locale/*.json",
+    "icon.svg",
+    "assets/*.png",
+    "README.md",
+    "README_ZH.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
